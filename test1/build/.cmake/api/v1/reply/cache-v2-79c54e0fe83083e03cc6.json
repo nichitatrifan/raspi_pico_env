@@ -1475,7 +1475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : " /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs"
+			"value" : " /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs"
 		},
 		{
 			"name" : "PICO_DOXYGEN_PATHS",
