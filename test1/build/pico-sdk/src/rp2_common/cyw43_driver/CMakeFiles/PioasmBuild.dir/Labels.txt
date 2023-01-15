@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/home/niki/pico-projects/test1/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
