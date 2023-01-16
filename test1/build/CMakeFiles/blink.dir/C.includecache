@@ -11,6 +11,8 @@ stdlib.h
 -
 pico/stdlib.h
 /home/niki/pico-projects/test1/pico/stdlib.h
+hardware/gpio.h
+/home/niki/pico-projects/test1/hardware/gpio.h
 
 /home/niki/pico-sdk/src/boards/include/boards/pico.h
 

@@ -1,32 +1,39 @@
 #include <stdlib.h>
 #include "pico/stdlib.h"
+#include "hardware/gpio.h"
 
 #define GPIO_ON 1
 #define GPIO_OFF 0
 
-#define EXTERNAL_LED 9
+#define SOUND_SENSOR 2
+#define DEFAULT_LED 25
 
 int main() {
 
-    const uint LED_PIN = 25;
-
     bool usb_on = stdio_usb_init();
+    bool sensor_state = true;
 
-    gpio_init(LED_PIN);
-    gpio_init(EXTERNAL_LED);
+    gpio_init(SOUND_SENSOR);
+    gpio_init(DEFAULT_LED);
 
-    gpio_set_dir(EXTERNAL_LED, GPIO_OUT);
-    gpio_set_dir(LED_PIN, GPIO_OUT);
+    gpio_set_dir(SOUND_SENSOR, GPIO_IN);
+    gpio_pull_up(SOUND_SENSOR);
+
+    gpio_set_dir(DEFAULT_LED, GPIO_OUT);
 
     if (usb_on) {
+        printf("Start collecting data:\n");
         while (true) {
-            printf("Hello World!");
-            gpio_put(LED_PIN, GPIO_ON);
-            gpio_put(EXTERNAL_LED, GPIO_ON);
-            sleep_ms(1000);
-            gpio_put(LED_PIN, GPIO_OFF);
-            gpio_put(EXTERNAL_LED, GPIO_OFF);
-            sleep_ms(1000);
+            sensor_state = gpio_get(SOUND_SENSOR);
+            if (sensor_state)
+            {
+                // printf("1\n");
+                gpio_put(DEFAULT_LED, 1);                
+            }else{
+                // printf("0\n");
+                gpio_put(DEFAULT_LED, 0);
+            }
+            
         }
     }
 
