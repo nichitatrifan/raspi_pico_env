@@ -9,6 +9,8 @@
 /home/niki/pico-projects/test1/blink.c
 stdlib.h
 -
+stdio.h
+-
 pico/stdlib.h
 /home/niki/pico-projects/test1/pico/stdlib.h
 hardware/gpio.h

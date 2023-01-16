@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named sound
+
+# Build rule for target.
+sound: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound
+.PHONY : sound
+
+# fast build rule for target.
+sound/fast:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/build
+.PHONY : sound/fast
+
+#=============================================================================
 # Target rules for targets named ELF2UF2Build
 
 # Build rule for target.
@@ -214,6 +227,33 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) -f pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+analog_sound.obj: analog_sound.c.obj
+
+.PHONY : analog_sound.obj
+
+# target to build an object file
+analog_sound.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/analog_sound.c.obj
+.PHONY : analog_sound.c.obj
+
+analog_sound.i: analog_sound.c.i
+
+.PHONY : analog_sound.i
+
+# target to preprocess a source file
+analog_sound.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/analog_sound.c.i
+.PHONY : analog_sound.c.i
+
+analog_sound.s: analog_sound.c.s
+
+.PHONY : analog_sound.s
+
+# target to generate assembly for a file
+analog_sound.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/analog_sound.c.s
+.PHONY : analog_sound.c.s
+
 blink.obj: blink.c.obj
 
 .PHONY : blink.obj
@@ -247,6 +287,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/niki/pico-
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
@@ -256,6 +297,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/niki/pico-sd
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
@@ -265,6 +307,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/niki/pico-sd
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
@@ -274,6 +317,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/niki/pico-sdk/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
@@ -283,6 +327,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/niki/pico-sdk/li
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
@@ -292,6 +337,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/niki/pico-sdk/li
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
@@ -301,6 +347,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/niki/pico-sdk/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
@@ -310,6 +357,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/niki/pico-sdk/li
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
@@ -319,6 +367,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/niki/pico-sdk/li
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
@@ -328,6 +377,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/niki/pico-s
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
@@ -337,6 +387,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/niki/pico-sdk
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
@@ -346,6 +397,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/niki/pico-sdk
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
@@ -355,6 +407,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/niki/pico-sdk/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
@@ -364,6 +417,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/niki/pico-sdk/li
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
@@ -373,6 +427,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/niki/pico-sdk/li
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
@@ -382,6 +437,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/niki/pico-sd
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
@@ -391,6 +447,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/niki/pico-sdk/
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
@@ -400,6 +457,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/niki/pico-sdk/
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
@@ -409,6 +467,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/niki/pico-sdk/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
@@ -418,6 +477,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/niki/pico-sdk/li
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
@@ -427,6 +487,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/niki/pico-sdk/li
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
@@ -436,6 +497,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/niki/pic
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
@@ -445,6 +507,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/niki/pico-
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
@@ -454,6 +517,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/niki/pico-
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
@@ -463,6 +527,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/niki/pico-sdk/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
@@ -472,6 +537,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/niki/pico-sdk/li
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
@@ -481,6 +547,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/niki/pico-sdk/li
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
@@ -490,6 +557,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/niki/pic
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
@@ -499,6 +567,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/niki/pico-
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
@@ -508,6 +577,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/niki/pico-
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
@@ -517,6 +587,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/niki/pic
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
@@ -526,6 +597,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/niki/pico-
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
@@ -535,6 +607,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/niki/pico-
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
@@ -544,6 +617,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/niki/pico-
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
@@ -553,6 +627,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/niki/pico-sd
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
@@ -562,6 +637,7 @@ home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/niki/pico-sd
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
@@ -571,6 +647,7 @@ home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/niki/pico-sdk/lib/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
@@ -580,6 +657,7 @@ home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/niki/pico-sdk/lib/ti
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
@@ -589,6 +667,7 @@ home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/niki/pico-sdk/lib/ti
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
@@ -598,6 +677,7 @@ home/niki/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/niki/pico-sdk/lib/tinyu
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
@@ -607,6 +687,7 @@ home/niki/pico-sdk/lib/tinyusb/src/device/usbd.i: home/niki/pico-sdk/lib/tinyusb
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
@@ -616,6 +697,7 @@ home/niki/pico-sdk/lib/tinyusb/src/device/usbd.s: home/niki/pico-sdk/lib/tinyusb
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
@@ -625,6 +707,7 @@ home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/niki/pico-sdk/l
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
@@ -634,6 +717,7 @@ home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/niki/pico-sdk/lib
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
@@ -643,6 +727,7 @@ home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/niki/pico-sdk/lib
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
@@ -652,6 +737,7 @@ home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: h
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
@@ -661,6 +747,7 @@ home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: hom
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
@@ -670,6 +757,7 @@ home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: hom
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
@@ -679,6 +767,7 @@ home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: h
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
@@ -688,6 +777,7 @@ home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: hom
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
@@ -697,6 +787,7 @@ home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: hom
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
@@ -706,6 +797,7 @@ home/niki/pico-sdk/lib/tinyusb/src/tusb.obj: home/niki/pico-sdk/lib/tinyusb/src/
 
 # target to build an object file
 home/niki/pico-sdk/lib/tinyusb/src/tusb.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/tusb.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/tusb.c.obj
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
@@ -715,6 +807,7 @@ home/niki/pico-sdk/lib/tinyusb/src/tusb.i: home/niki/pico-sdk/lib/tinyusb/src/tu
 
 # target to preprocess a source file
 home/niki/pico-sdk/lib/tinyusb/src/tusb.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/tusb.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/tusb.c.i
 
@@ -724,6 +817,7 @@ home/niki/pico-sdk/lib/tinyusb/src/tusb.s: home/niki/pico-sdk/lib/tinyusb/src/tu
 
 # target to generate assembly for a file
 home/niki/pico-sdk/lib/tinyusb/src/tusb.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/lib/tinyusb/src/tusb.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/niki/pico-sdk/lib/tinyusb/src/tusb.c.s
 
@@ -733,6 +827,7 @@ home/niki/pico-sdk/src/common/pico_sync/critical_section.obj: home/niki/pico-sdk
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_sync/critical_section.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
@@ -742,6 +837,7 @@ home/niki/pico-sdk/src/common/pico_sync/critical_section.i: home/niki/pico-sdk/s
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_sync/critical_section.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/critical_section.c.i
 
@@ -751,6 +847,7 @@ home/niki/pico-sdk/src/common/pico_sync/critical_section.s: home/niki/pico-sdk/s
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_sync/critical_section.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/critical_section.c.s
 
@@ -760,6 +857,7 @@ home/niki/pico-sdk/src/common/pico_sync/lock_core.obj: home/niki/pico-sdk/src/co
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_sync/lock_core.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
@@ -769,6 +867,7 @@ home/niki/pico-sdk/src/common/pico_sync/lock_core.i: home/niki/pico-sdk/src/comm
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_sync/lock_core.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/lock_core.c.i
 
@@ -778,6 +877,7 @@ home/niki/pico-sdk/src/common/pico_sync/lock_core.s: home/niki/pico-sdk/src/comm
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_sync/lock_core.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/lock_core.c.s
 
@@ -787,6 +887,7 @@ home/niki/pico-sdk/src/common/pico_sync/mutex.obj: home/niki/pico-sdk/src/common
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_sync/mutex.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/mutex.c.obj
 
@@ -796,6 +897,7 @@ home/niki/pico-sdk/src/common/pico_sync/mutex.i: home/niki/pico-sdk/src/common/p
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_sync/mutex.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/mutex.c.i
 
@@ -805,6 +907,7 @@ home/niki/pico-sdk/src/common/pico_sync/mutex.s: home/niki/pico-sdk/src/common/p
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_sync/mutex.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/mutex.c.s
 
@@ -814,6 +917,7 @@ home/niki/pico-sdk/src/common/pico_sync/sem.obj: home/niki/pico-sdk/src/common/p
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_sync/sem.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/sem.c.obj
 
@@ -823,6 +927,7 @@ home/niki/pico-sdk/src/common/pico_sync/sem.i: home/niki/pico-sdk/src/common/pic
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_sync/sem.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/sem.c.i
 
@@ -832,6 +937,7 @@ home/niki/pico-sdk/src/common/pico_sync/sem.s: home/niki/pico-sdk/src/common/pic
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_sync/sem.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_sync/sem.c.s
 
@@ -841,6 +947,7 @@ home/niki/pico-sdk/src/common/pico_time/time.obj: home/niki/pico-sdk/src/common/
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_time/time.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_time/time.c.obj
 
@@ -850,6 +957,7 @@ home/niki/pico-sdk/src/common/pico_time/time.i: home/niki/pico-sdk/src/common/pi
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_time/time.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_time/time.c.i
 
@@ -859,6 +967,7 @@ home/niki/pico-sdk/src/common/pico_time/time.s: home/niki/pico-sdk/src/common/pi
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_time/time.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_time/time.c.s
 
@@ -868,6 +977,7 @@ home/niki/pico-sdk/src/common/pico_time/timeout_helper.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
@@ -877,6 +987,7 @@ home/niki/pico-sdk/src/common/pico_time/timeout_helper.i: home/niki/pico-sdk/src
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
@@ -886,6 +997,7 @@ home/niki/pico-sdk/src/common/pico_time/timeout_helper.s: home/niki/pico-sdk/src
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
@@ -895,6 +1007,7 @@ home/niki/pico-sdk/src/common/pico_util/datetime.obj: home/niki/pico-sdk/src/com
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_util/datetime.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_util/datetime.c.obj
 
@@ -904,6 +1017,7 @@ home/niki/pico-sdk/src/common/pico_util/datetime.i: home/niki/pico-sdk/src/commo
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_util/datetime.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_util/datetime.c.i
 
@@ -913,6 +1027,7 @@ home/niki/pico-sdk/src/common/pico_util/datetime.s: home/niki/pico-sdk/src/commo
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_util/datetime.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_util/datetime.c.s
 
@@ -922,6 +1037,7 @@ home/niki/pico-sdk/src/common/pico_util/pheap.obj: home/niki/pico-sdk/src/common
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_util/pheap.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_util/pheap.c.obj
 
@@ -931,6 +1047,7 @@ home/niki/pico-sdk/src/common/pico_util/pheap.i: home/niki/pico-sdk/src/common/p
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_util/pheap.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_util/pheap.c.i
 
@@ -940,6 +1057,7 @@ home/niki/pico-sdk/src/common/pico_util/pheap.s: home/niki/pico-sdk/src/common/p
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_util/pheap.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_util/pheap.c.s
 
@@ -949,6 +1067,7 @@ home/niki/pico-sdk/src/common/pico_util/queue.obj: home/niki/pico-sdk/src/common
 
 # target to build an object file
 home/niki/pico-sdk/src/common/pico_util/queue.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : home/niki/pico-sdk/src/common/pico_util/queue.c.obj
 
@@ -958,6 +1077,7 @@ home/niki/pico-sdk/src/common/pico_util/queue.i: home/niki/pico-sdk/src/common/p
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/common/pico_util/queue.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/niki/pico-sdk/src/common/pico_util/queue.c.i
 
@@ -967,8 +1087,36 @@ home/niki/pico-sdk/src/common/pico_util/queue.s: home/niki/pico-sdk/src/common/p
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/common/pico_util/queue.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/niki/pico-sdk/src/common/pico_util/queue.c.s
+
+home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.obj: home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+
+.PHONY : home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+
+# target to build an object file
+home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+.PHONY : home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+
+home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.i: home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+.PHONY : home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.s: home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
+.PHONY : home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
 home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
@@ -976,6 +1124,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
@@ -985,6 +1134,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.i: home/niki/pico-sdk/src
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
@@ -994,6 +1144,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.s: home/niki/pico-sdk/src
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
@@ -1003,6 +1154,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/niki/pico-sdk
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
@@ -1012,6 +1164,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/niki/pico-sdk/s
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
@@ -1021,6 +1174,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/niki/pico-sdk/s
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
@@ -1030,6 +1184,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/niki/pico-s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
@@ -1039,6 +1194,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
@@ -1048,6 +1204,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/niki/pico-sdk/src
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
@@ -1057,6 +1214,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/niki/pico-sdk/src
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
@@ -1066,6 +1224,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
@@ -1075,6 +1234,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
@@ -1084,6 +1244,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
@@ -1093,6 +1254,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/niki/pico-sdk/src/r
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
@@ -1102,6 +1264,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/niki/pico-sdk/src/rp2
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
@@ -1111,6 +1274,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/niki/pico-sdk/src/rp2
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
@@ -1120,6 +1284,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/niki/
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
@@ -1129,6 +1294,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/niki/pico-sdk/src/r
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
@@ -1138,6 +1304,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/niki/pico-sdk/src/rp2
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
@@ -1147,6 +1314,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/niki/pico-sdk/src/rp2
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
@@ -1156,6 +1324,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
@@ -1165,6 +1334,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
@@ -1174,6 +1344,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
@@ -1183,6 +1354,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
@@ -1192,6 +1364,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/niki/pico-sdk/src
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
@@ -1201,6 +1374,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/niki/pico-sdk/src
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
@@ -1210,6 +1384,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
@@ -1219,6 +1394,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
@@ -1228,6 +1404,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
@@ -1237,6 +1414,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
@@ -1246,6 +1424,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
@@ -1255,6 +1434,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
@@ -1264,6 +1444,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/niki/pico
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
@@ -1273,6 +1454,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/niki/pico-s
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
@@ -1282,6 +1464,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/niki/pico-s
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
@@ -1291,6 +1474,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
@@ -1300,6 +1484,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
@@ -1309,6 +1494,7 @@ home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
@@ -1318,6 +1504,7 @@ home/niki/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/niki/pico
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
@@ -1327,6 +1514,7 @@ home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
@@ -1336,6 +1524,7 @@ home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/niki/pico-sdk/src
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
@@ -1345,6 +1534,7 @@ home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/niki/pico-sdk/src
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
@@ -1354,6 +1544,7 @@ home/niki/pico-sdk/src/rp2_common/pico_divider/divider.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
@@ -1363,6 +1554,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: home/niki/pico-s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
@@ -1372,6 +1564,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: home/niki/pic
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
@@ -1381,6 +1574,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: home/niki/pico-
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
@@ -1390,6 +1584,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: home/niki/pico-
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
@@ -1399,6 +1594,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/niki/pico-sd
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
@@ -1408,6 +1604,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_math.i: home/niki/pico-sdk/
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
@@ -1417,6 +1614,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_math.s: home/niki/pico-sdk/
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
@@ -1426,6 +1624,7 @@ home/niki/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: home/niki/
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
@@ -1435,6 +1634,7 @@ home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
@@ -1444,6 +1644,7 @@ home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
@@ -1453,6 +1654,7 @@ home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
@@ -1462,6 +1664,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: home/niki/pico-sdk
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
@@ -1471,6 +1674,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: home/niki/pico-
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
@@ -1480,6 +1684,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: home/niki/pico-sd
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
@@ -1489,6 +1694,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: home/niki/pico-sd
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
@@ -1498,6 +1704,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/niki/pico-sdk/
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
@@ -1507,6 +1714,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_math.i: home/niki/pico-sdk/sr
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
@@ -1516,6 +1724,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_math.s: home/niki/pico-sdk/sr
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
@@ -1525,6 +1734,7 @@ home/niki/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: home/niki/pi
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
@@ -1534,6 +1744,7 @@ home/niki/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
@@ -1543,6 +1754,7 @@ home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: home/niki/pico-sd
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
@@ -1552,6 +1764,7 @@ home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: home/niki/pico-sdk/
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
@@ -1561,6 +1774,7 @@ home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: home/niki/pico-sdk/
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
@@ -1570,6 +1784,7 @@ home/niki/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/niki/pico
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
@@ -1579,6 +1794,7 @@ home/niki/pico-sdk/src/rp2_common/pico_platform/platform.obj: home/niki/pico-sdk
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
@@ -1588,6 +1804,7 @@ home/niki/pico-sdk/src/rp2_common/pico_platform/platform.i: home/niki/pico-sdk/s
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
@@ -1597,6 +1814,7 @@ home/niki/pico-sdk/src/rp2_common/pico_platform/platform.s: home/niki/pico-sdk/s
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
@@ -1606,6 +1824,7 @@ home/niki/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
@@ -1615,6 +1834,7 @@ home/niki/pico-sdk/src/rp2_common/pico_printf/printf.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
@@ -1624,6 +1844,7 @@ home/niki/pico-sdk/src/rp2_common/pico_printf/printf.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
@@ -1633,6 +1854,7 @@ home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/niki/pico-sdk/s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
@@ -1642,6 +1864,7 @@ home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/niki/pico-sdk/src
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
@@ -1651,6 +1874,7 @@ home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/niki/pico-sdk/src
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
@@ -1660,6 +1884,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: home/niki/
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
@@ -1669,6 +1894,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: home/niki/pi
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
@@ -1678,6 +1904,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: home/niki/pi
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
@@ -1687,6 +1914,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: home/niki/pico-sd
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
@@ -1696,6 +1924,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: home/niki/p
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
@@ -1705,6 +1934,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: home/niki/pic
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
@@ -1714,6 +1944,7 @@ home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: home/niki/pic
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
@@ -1723,6 +1954,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/niki/pico-sdk/src/r
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
@@ -1732,6 +1964,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/niki/pico-sdk/src/rp2
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
@@ -1741,6 +1974,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/niki/pico-sdk/src/rp2
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
@@ -1750,6 +1984,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/niki/
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
@@ -1759,6 +1994,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/niki/pi
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
@@ -1768,6 +2004,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/niki/pi
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
@@ -1777,6 +2014,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/niki/pico-s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
@@ -1786,6 +2024,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/niki/pico-sdk
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
@@ -1795,6 +2034,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/niki/pico-sdk
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
@@ -1804,6 +2044,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
@@ -1813,6 +2054,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/n
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
@@ -1822,6 +2064,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/n
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
@@ -1831,6 +2074,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/niki/pico-sdk/src
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
@@ -1840,6 +2084,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/niki/pico-sdk/src/r
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
@@ -1849,6 +2094,7 @@ home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/niki/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
@@ -1858,6 +2104,7 @@ home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/niki/pico-s
 
 # target to build an object file
 home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
@@ -1867,6 +2114,7 @@ home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/niki/pico-sdk
 
 # target to preprocess a source file
 home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
@@ -1876,6 +2124,7 @@ home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/niki/pico-sdk
 
 # target to generate assembly for a file
 home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
+	$(MAKE) -f CMakeFiles/sound.dir/build.make CMakeFiles/sound.dir/home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 	$(MAKE) -f CMakeFiles/blink.dir/build.make CMakeFiles/blink.dir/home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/niki/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
@@ -1887,6 +2136,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... sound"
 	@echo "... ELF2UF2Build"
 	@echo "... blink"
 	@echo "... bs2_default_padded_checksummed_asm"
@@ -1895,6 +2145,9 @@ help:
 	@echo "... PioasmBuild"
 	@echo "... cyw43_firmware_package"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... analog_sound.obj"
+	@echo "... analog_sound.i"
+	@echo "... analog_sound.s"
 	@echo "... blink.obj"
 	@echo "... blink.i"
 	@echo "... blink.s"
@@ -1979,6 +2232,9 @@ help:
 	@echo "... home/niki/pico-sdk/src/common/pico_util/queue.obj"
 	@echo "... home/niki/pico-sdk/src/common/pico_util/queue.i"
 	@echo "... home/niki/pico-sdk/src/common/pico_util/queue.s"
+	@echo "... home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.obj"
+	@echo "... home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... home/niki/pico-sdk/src/rp2_common/hardware_adc/adc.s"
 	@echo "... home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.obj"
 	@echo "... home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.i"
 	@echo "... home/niki/pico-sdk/src/rp2_common/hardware_claim/claim.s"

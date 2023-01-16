@@ -19,7 +19,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2
+						2,
+						8
 					]
 				},
 				{
@@ -871,7 +872,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						2
+						2,
+						8
 					]
 				},
 				{
@@ -969,7 +971,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-e72db6eb940a4d372584.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-2c3e81d80c09e61830e2.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
@@ -983,7 +985,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "blink::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-blink-Debug-1b16a1f712e0d2a50e4e.json",
+					"jsonFile" : "target-blink-Debug-497c0d6bd27f1bf1c0d6.json",
 					"name" : "blink",
 					"projectIndex" : 0
 				},
@@ -1021,6 +1023,13 @@
 					"jsonFile" : "target-cyw43_firmware_package-Debug-ece359bcb575367e8810.json",
 					"name" : "cyw43_firmware_package",
 					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sound::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sound-Debug-64be5cee954ebf1f5f06.json",
+					"name" : "sound",
+					"projectIndex" : 0
 				}
 			]
 		}

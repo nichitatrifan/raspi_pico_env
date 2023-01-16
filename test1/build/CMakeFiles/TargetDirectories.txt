@@ -1,5 +1,6 @@
 /home/niki/pico-projects/test1/build/CMakeFiles/rebuild_cache.dir
 /home/niki/pico-projects/test1/build/CMakeFiles/edit_cache.dir
+/home/niki/pico-projects/test1/build/CMakeFiles/sound.dir
 /home/niki/pico-projects/test1/build/CMakeFiles/ELF2UF2Build.dir
 /home/niki/pico-projects/test1/build/CMakeFiles/blink.dir
 /home/niki/pico-projects/test1/build/pico-sdk/CMakeFiles/rebuild_cache.dir
