@@ -6,6 +6,15 @@ project(blink C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(FFTW3 REQUIRED fftw3)
+include_directories(${FFTW3_INCLUDE_DIRS})
+
+if(FFTW3_FOUND)
+    message(STATUS "Included FFTW library: " ${FFTW_INCLUDES})
+endif()
+
+
 pico_sdk_init()
 
 add_executable(blink

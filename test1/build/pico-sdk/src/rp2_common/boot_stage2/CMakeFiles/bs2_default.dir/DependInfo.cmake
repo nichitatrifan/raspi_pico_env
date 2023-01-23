@@ -18,6 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "/usr/local/include"
   "/home/niki/pico-sdk/src/rp2_common/boot_stage2/asminclude"
   "/home/niki/pico-sdk/src/rp2040/hardware_regs/include"
   "/home/niki/pico-sdk/src/rp2_common/hardware_base/include"

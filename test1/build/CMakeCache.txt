@@ -241,6 +241,21 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
+//Path to a library.
+FFTW:FILEPATH=FFTW-NOTFOUND
+
+//The directory containing a CMake configuration file for FFTW3.
+FFTW3_DIR:PATH=/usr/local/lib/cmake/fftw3
+
+//The directory containing a CMake configuration file for FFTW.
+FFTW_DIR:PATH=FFTW_DIR-NOTFOUND
+
+//Path to a file.
+FFTW_INCLUDE:PATH=FFTW_INCLUDE-NOTFOUND
+
+//Path to a library.
+FFTW_LIB:FILEPATH=FFTW_LIB-NOTFOUND
+
 //PICO target board (e.g. pico)
 PICO_BOARD:STRING=pico
 
@@ -292,6 +307,9 @@ PICO_STDIO_UART:BOOL=ON
 //Globablly enable stdio semihosting 
 PICO_STDIO_USB:BOOL=OFF
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 _Python3_EXECUTABLE:FILEPATH=/usr/bin/python3.8
 
@@ -306,6 +324,9 @@ pico_sdk_BINARY_DIR:STATIC=/home/niki/pico-projects/test1/build/pico-sdk
 
 //Value Computed by CMake
 pico_sdk_SOURCE_DIR:STATIC=/home/niki/pico-sdk
+
+//Path to a library.
+pkgcfg_lib_FFTW3_fftw3:FILEPATH=/usr/local/lib/libfftw3.a
 
 
 ########################
@@ -477,13 +498,75 @@ DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DOXYGEN_EXECUTABLE
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 FAMILY_MCUS:INTERNAL=RP2040
+FFTW3_CFLAGS:INTERNAL=-I/usr/local/include
+FFTW3_CFLAGS_I:INTERNAL=
+FFTW3_CFLAGS_OTHER:INTERNAL=
+FFTW3_FOUND:INTERNAL=1
+FFTW3_INCLUDEDIR:INTERNAL=/usr/local/include
+FFTW3_INCLUDE_DIRS:INTERNAL=/usr/local/include
+FFTW3_LDFLAGS:INTERNAL=-L/usr/local/lib;-lfftw3
+FFTW3_LDFLAGS_OTHER:INTERNAL=
+FFTW3_LIBDIR:INTERNAL=/usr/local/lib
+FFTW3_LIBRARIES:INTERNAL=fftw3
+FFTW3_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+FFTW3_LIBS:INTERNAL=
+FFTW3_LIBS_L:INTERNAL=
+FFTW3_LIBS_OTHER:INTERNAL=
+FFTW3_LIBS_PATHS:INTERNAL=
+FFTW3_MODULE_NAME:INTERNAL=fftw3
+FFTW3_PREFIX:INTERNAL=/usr/local
+FFTW3_STATIC_CFLAGS:INTERNAL=-I/usr/local/include
+FFTW3_STATIC_CFLAGS_I:INTERNAL=
+FFTW3_STATIC_CFLAGS_OTHER:INTERNAL=
+FFTW3_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/include
+FFTW3_STATIC_LDFLAGS:INTERNAL=-L/usr/local/lib;-lfftw3;-lm
+FFTW3_STATIC_LDFLAGS_OTHER:INTERNAL=
+FFTW3_STATIC_LIBDIR:INTERNAL=
+FFTW3_STATIC_LIBRARIES:INTERNAL=fftw3;m
+FFTW3_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+FFTW3_STATIC_LIBS:INTERNAL=
+FFTW3_STATIC_LIBS_L:INTERNAL=
+FFTW3_STATIC_LIBS_OTHER:INTERNAL=
+FFTW3_STATIC_LIBS_PATHS:INTERNAL=
+FFTW3_VERSION:INTERNAL=3.3.10
+FFTW3_fftw3_INCLUDEDIR:INTERNAL=
+FFTW3_fftw3_LIBDIR:INTERNAL=
+FFTW3_fftw3_PREFIX:INTERNAL=
+FFTW3_fftw3_VERSION:INTERNAL=
+FFTW_CFLAGS:INTERNAL=
+FFTW_CFLAGS_I:INTERNAL=
+FFTW_CFLAGS_OTHER:INTERNAL=
+FFTW_FOUND:INTERNAL=
+FFTW_INCLUDEDIR:INTERNAL=
+FFTW_LIBDIR:INTERNAL=
+FFTW_LIBS:INTERNAL=
+FFTW_LIBS_L:INTERNAL=
+FFTW_LIBS_OTHER:INTERNAL=
+FFTW_LIBS_PATHS:INTERNAL=
+FFTW_MODULE_NAME:INTERNAL=
+FFTW_PREFIX:INTERNAL=
+FFTW_STATIC_CFLAGS:INTERNAL=
+FFTW_STATIC_CFLAGS_I:INTERNAL=
+FFTW_STATIC_CFLAGS_OTHER:INTERNAL=
+FFTW_STATIC_LIBDIR:INTERNAL=
+FFTW_STATIC_LIBS:INTERNAL=
+FFTW_STATIC_LIBS_L:INTERNAL=
+FFTW_STATIC_LIBS_OTHER:INTERNAL=
+FFTW_STATIC_LIBS_PATHS:INTERNAL=
+FFTW_VERSION:INTERNAL=
+FFTW_fftw3f_INCLUDEDIR:INTERNAL=
+FFTW_fftw3f_LIBDIR:INTERNAL=
+FFTW_fftw3f_PREFIX:INTERNAL=
+FFTW_fftw3f_VERSION:INTERNAL=
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
 PICO_BOOT_STAGE2_DIR:INTERNAL=/home/niki/pico-sdk/src/rp2_common/boot_stage2
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/home/niki/pico-sdk/cmake/preload/platforms
 PICO_CMAKE_PRELOAD_PLATFORM_FILE:INTERNAL=/home/niki/pico-sdk/cmake/preload/platforms/rp2040.cmake
 PICO_COMPILER_ASM:INTERNAL=/usr/bin/arm-none-eabi-gcc
-PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs
+PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL= /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs /home/niki/pico-sdk/src/rp2_common/cmsis /home/niki/pico-sdk/src/rp2040/hardware_regs
 PICO_DOXYGEN_PATHS:INTERNAL= /home/niki/pico-sdk/src/common /home/niki/pico-sdk/lib/cyw43-driver/src /home/niki/pico-sdk/src/rp2_common /home/niki/pico-sdk/src/rp2040
 PICO_NO_HARDWARE:INTERNAL=0
 PICO_ON_DEVICE:INTERNAL=1
@@ -491,9 +574,16 @@ PICO_PLATFORM_CMAKE_FILE:INTERNAL=/home/niki/pico-sdk/src/rp2040.cmake
 //Enable build of SDK tests
 PICO_SDK_TESTS_ENABLED:INTERNAL=
 PICO_TOOLCHAIN_PATH:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: _Python3_EXECUTABLE
 _Python3_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: _Python3_INTERPRETER_SIGNATURE
 _Python3_INTERPRETER_SIGNATURE-ADVANCED:INTERNAL=1
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=60fbcba4d3ec42cb22d9b25de2c7c03a
+__pkg_config_arguments_FFTW3:INTERNAL=REQUIRED;fftw3
+__pkg_config_checked_FFTW3:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_FFTW3_fftw3
+pkgcfg_lib_FFTW3_fftw3-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/local/lib
 

@@ -69,6 +69,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "/usr/local/include"
   "/home/niki/pico-sdk/src/common/pico_stdlib/include"
   "/home/niki/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/niki/pico-sdk/src/common/pico_base/include"
@@ -226,6 +227,7 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/local/include"
   "/home/niki/pico-sdk/src/common/pico_stdlib/include"
   "/home/niki/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/niki/pico-sdk/src/common/pico_base/include"
@@ -326,6 +328,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/include"
   "/home/niki/pico-sdk/src/common/pico_stdlib/include"
   "/home/niki/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/niki/pico-sdk/src/common/pico_base/include"
