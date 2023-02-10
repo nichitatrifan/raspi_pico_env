@@ -222,6 +222,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/i2c.dir/DependInfo.cmake"
   "CMakeFiles/sound.dir/DependInfo.cmake"
   "CMakeFiles/ELF2UF2Build.dir/DependInfo.cmake"
   "CMakeFiles/blink.dir/DependInfo.cmake"
